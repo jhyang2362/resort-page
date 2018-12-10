@@ -1,49 +1,40 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-    <!-- 필수 메타 태그 -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="/public/image/favicon.png" type="image/png">
+    <link rel="icon" href="image/favicon.png" type="image/png">
     <title>WELCOME TO DONGGUK RESORT</title>
-
-
-
-    <!-- 부트 스트랩 CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
-
-
-    <!-- 메인 css -->
+    <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-
-
-    <!--================헤더 영역=================-->
+    <!--================Header Area =================-->
     <header class="header_area">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- 혹시 몰라서 모바일 DP를 위한 토글 그룹화 -->
+
                 <a class="navbar-brand logo_h" href="http://localhost:3000/index"><img src="image/Logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
                 <!-- 토글 링을위한 탐색 링크, 양식 및 기타 콘텐츠 수집 -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="http://localhost:3000">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost:3000/about">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost:3000/index">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="http://localhost:3000/about">About us</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost:3000/Rooms">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost:3000/Amenities">Amenities</a></li>
                         <li class="nav-item submenu dropdown">
@@ -55,234 +46,36 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost:3000/Restaurant">Restaurant</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost:3000/QnA">QnA</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="http://localhost:3000/signup">Sign Up</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="http://localhost:3000/login">Log In</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!--================헤더 영역 =================-->
+    <!--================Header Area =================-->
 
 
 
 
 
 
-    <!--================배너 영역 및 빠른예약  =================-->
-    <section class="banner_area">
-        <div class="booking_table d_flex align-items-center">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-            <div class="container">
-                <div class="banner_content text-center">
-                    <h6>Looking for the best utopia on the earth?</h6>
-                    <h2>Welcome to Dongguk Resort.</h2>
-                    <p>Popular events and ski season events are in progress. Please use a lot.<br> Please make a reservation now.</p>
-                    <a href="#" class="btn theme_btn button_hover">Get Started</a>
-                </div>
-            </div>
-        </div>
-        <div class="hotel_booking_area position">
-            <div class="container">
-                <div class="hotel_booking_table">
-                    <div class="col-md-3">
-                        <h2>곧 매진!<br>hurry up!</h2>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="boking_table">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker11'>
-                                                <input type='text' class="form-control" placeholder="체크인 날짜" />
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker1'>
-                                                <input type='text' class="form-control" placeholder="체크아웃 날짜" />
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="input-group">
-                                            <select class="wide">
-                                                <option data-display="성인">성인</option>
-                                                <option value="1">1명</option>
-                                                <option value="2">2명</option>
-                                                <option value="2">3명</option>
-                                                <option value="2">4명</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="input-group">
-                                            <select class="wide">
-                                                <option data-display="어린이">어린이</option>
-                                                <option value="1">1명</option>
-                                                <option value="2">2명</option>
-                                                <option value="2">3명</option>
-                                                <option value="2">4명</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="input-group">
-                                            <select class="wide">
-                                                <option data-display="객실 수">객실 수</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                        <a class="book_now_btn button_hover" href="#">지금 예약</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================배너 영역=================-->
-
-
-
-
-
-
-    <!--================ 숙박 시설 영역  =================-->
-    <section class="accomodation_area section_gap">
+    <!--================Breadcrumb Area =================-->
+    <section class="breadcrumb_area">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
         <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Hotel Accomodation</h2>
-                <p>There are various rooms and facilities options. Please choose according to your preference. </p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room1.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
-                        <h5>5만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room2.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
-                        <h5>10만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room3.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Family Room</h4></a>
-                        <h5>15만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room4.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
-                        <h5>20만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
+            <div class="page-cover text-center">
+                <h2 class="page-cover-tittle">About Us</h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">About</li>
+                </ol>
             </div>
         </div>
     </section>
-    <!--================ 숙박 시설 영역  =================-->
+    <!--================Breadcrumb Area =================-->
 
 
 
 
-
-
-    <!--================ 부대시설 영역  =================-->
-    <section class="facilities_area section_gap">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
-        </div>
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_w">Amenities</h2>
-                <p>Various facilities are available. Please use according to your preference.</p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                        <p>  조식뷔페 : 07:00 - 10:00</p>
-
-                        <p>  런치뷔페 : 12:00 - 14:00</p>
-
-                        <p>  디너뷔페 : 18:00 - 20:00</p>
-
-                        <p>성인 : 15,000 | 7세미만 : 7,000원</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Leisure Club</h4>
-                        <p>동국리조트에는 다양한 레저시설이 있습니다. 현재 겨울시즌에는 스키장시설이 운영되고 있습니다.</p>
-                        <p>이용시간 : 02:00 - 23:00</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        <p>전국에서 가장 큰 규모를 자랑하는 동국리조트의 실내 수영장은 최상의 서비스를 제공합니다.</p>
-                        <p>이용시간 : 24시간 운영</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-car"></i>Easy parking</h4>
-                        <p>자동 번호인식 및 자동 주차관리 시스템으로 보다 편리하게 주차하실수 있습니다. 월주차 문의.</p>
-                        <p>이용시간 : 24시간 운영</p>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                        <p>최신식 시설을 자랑하는 동국리조트의 헬스시설은 여러분들을 뽀빠이로 만들어 드립니다.</p>
-                        <p>이용시간 : 24시간 운영</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                        <p>남산의 야경과 어우러져 발리에서 모셔온 최고의 바텐더와 초청가수가 행복을 선사합니다. </p>
-                        <p>이용시간 : 22:00 - 02:00</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ 부대시설 영역  =================-->
     <!--================ 히스토리 영역  =================-->
     <section class="about_history_area section_gap">
         <div class="container">
@@ -301,6 +94,12 @@
         </div>
     </section>
     <!--================ 히스토리 영역  =================-->
+
+
+
+
+
+
     <!--================ 회원 평가 영역  =================-->
     <section class="testimonial_area section_gap">
         <div class="container">
@@ -369,6 +168,10 @@
         </div>
     </section>
     <!--================ 회원 평가 영역  =================-->
+
+
+
+
 
 
 
@@ -450,6 +253,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
     <!--================ 바닥글 시작 영역  =================-->
     <footer class="footer-area section_gap">
         <div class="container">
@@ -479,9 +291,6 @@
                                     <li><a href="#">QnA</a></li>
                                     <li><a href="#">Service</a></li>
                                 </ul>
-
-
-                                Restaurant
                             </div>
                         </div>
                     </div>
@@ -542,18 +351,7 @@
         </div>
     </footer>
     <!--================ 바닥 글 끝 영역  =================-->
-
-
-
-
-
-
-
     <!-- Optional 자바스크립트 -->
-
-
-
-
     <!-- 먼저 jQuery, 그 다음 Popper.js, JS 부트 스트랩 -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.js"></script>
