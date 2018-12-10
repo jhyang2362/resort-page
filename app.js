@@ -8,7 +8,44 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var oracledb = require('oracledb');
+
 var app = express();
+
+//oracledb setting
+oracledb.getConnection(
+  {
+    user :"****",
+    password  :"****",
+    connectString :"****"
+  },
+  function(err, connection){
+    if(err) {
+      console.error(err.message);
+      return;
+    }
+    connection.execute(
+      "SELECT * FROM ROOM", //연결됐는지 확인 용 쿼리
+      function(err, result){
+        if(err) {
+          console.error(err.message);
+          doRelease(connection);
+        }
+        console.log(result.metaData);
+        console.log(result.rows);
+        doRelease(connection);
+      }
+    );
+  }
+);
+function doRelease(connection){
+  connection.release(
+    function(err){
+      if(err) console.error(err.message);
+    }
+  )
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
