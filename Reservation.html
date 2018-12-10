@@ -1,15 +1,28 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="kr">
 <head>
+
     <!-- 필수 메타 태그 -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="image/favicon.png" type="image/png">
     <title>WELCOME TO DONGGUK RESORT</title>
 
-
-
-    <!-- 부트 스트랩 CSS -->
+    <meta name="author" content="Ramaseshan Parthasarathy">
+    <meta name="description" content="user dashboard">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /> <!-- mobile optimize-->
+    <title>Reservation</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!--import jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- Font Awesome Icons-->
+    <script src="https://use.fontawesome.com/ce18c92b36.js"></script>
+    <!--MDL Icons=-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="vendors/linericon/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -17,14 +30,66 @@
     <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
-
-
-    <!-- 메인 css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style is="custom-style">
+
+
+        body {
+            background-color: white;
+        }
+
+        ::-webkit-input-placeholder {
+            color: black;
+        }
+
+        :-moz-placeholder {
+            color: black;
+            opacity: 1;
+        }
+
+        ::-moz-placeholder {
+            color: black;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: black;
+        }
+
+        .tabs .tab a {
+            color: black;
+        }
+            /*Black color to the text*/
+
+            .tabs .tab a:hover {
+                background-color: white color: #000;
+            }
+            /*Text color on hover*/
+
+            .tabs .tab a.active {
+                background-color: orange;
+                color: black;
+            }
+        /*Background and text color when a tab is active*/
+
+        .tabs .indicator {
+            background-color: white
+        }
+        /*Color of underline*/
+file:///C:/Users/Cool/Desktop/DBP%20HTML%20SOURCE%20(5)/Reservation1.html#test1
+        label {
+            background-color: white;
+            color: black;
+        }
+
+        .checkbox-indigo[type="checkbox"] + label:after {
+            border: 2px solid indigo;
+            background: transparent;
+        }
+    </style>
 </head>
-<body>
+
 
 
 
@@ -45,9 +110,9 @@
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-                      <li class="nav-item"><a class="nav-link" href="Rooms.html">Rooms</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="Reservation.html">Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Rooms.html">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link" href="Amenities.html">Amenities</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="Reservation.html">Reservation</a></li>
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                             <ul class="dropdown-menu">
@@ -63,9 +128,6 @@
         </div>
     </header>
     <!--================헤더 영역 =================-->
-
-
-
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
         <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
@@ -80,532 +142,450 @@
         </div>
     </section>
     <!--================Breadcrumb Area =================-->
-
-
-
-
-    <!--================ 숙박 시설 영역  =================-->
-    <section class="accomodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">You can make reservations for the best conditions.</h2>
-                <p>If you select the room you want, the information page will help you. </p>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section class="banner_area">
-                <div class="booking_table d_flex align-items-center">
-                    <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-                    <div class="container">
-                        <div class="banner_content text-center">
-                            <h6>Looking for the best utopia on the earth?</h6>
-                            <h2>Welcome to Dongguk Resort.</h2>
-                            <p>Popular events and ski season events are in progress. Please use a lot.<br> Please make a reservation now.</p>
-                            <a href="#" class="btn theme_btn button_hover">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="hotel_booking_area position">
-                    <div class="container">
-                        <div class="hotel_booking_table">
-                            <div class="col-md-3">
-                                <h2>곧 매진!<br>hurry up!</h2>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="boking_table">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="book_tabel_item">
-                                                <div class="form-group">
-                                                    <div class='input-group date' id='datetimepicker11'>
-                                                        <input type='text' class="form-control" placeholder="체크인 날짜" />
-                                                        <span class="input-group-addon">
-                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class='input-group date' id='datetimepicker1'>
-                                                        <input type='text' class="form-control" placeholder="체크아웃 날짜" />
-                                                        <span class="input-group-addon">
-                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="book_tabel_item">
-                                                <div class="input-group">
-                                                    <select class="wide">
-                                                        <option data-display="결제방법">결제수단</option>
-                                                        <option value="1">현금</option>
-                                                        <option value="2">신용카드</option>
-
-
-                                                    </select>
-                                                </div>
-
-                                                  <div class="input-group d-flex flex-row">
-                                                      <input name="name" placeholder="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'name '" required="" type="name">
-                                                      <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
-
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="book_tabel_item">
-                                                <div class="input-group">
-                                                    <select class="wide">
-                                                        <option data-display="객실 선택">객실 선택</option>
-                                                        <option value="1">Standard Room (선착순 50% 할인)</option>
-                                                        <option value="2">Deluxe Room   (선착순 50% 할인)</option>
-                                                        <option value="3">Suite Room    (선착순 50% 할인)</option>
-                                                        <option value="4">Standard Room (Ski Package)</option>
-                                                        <option value="5">Deluxe Room   (Ski Package)</option>
-                                                        <option value="6">Suite Room    (Ski Package)</option>
-                                                        <option value="7">Standard Room </option>
-                                                        <option value="8">Deluxe Room   </option>
-                                                        <option value="9">Suite Room    </option>
-                                                    </select>
-                                                </div>
-                                                <a class="book_now_btn button_hover" href="#">지금 예약</a>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </section>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            <!--================배너 영역=================-->
-
-
-
-
-
-
-            <!--================ 숙박 시설 영역  =================-->
-            <section class="accomodation_area section_gap">
-                <div class="container">
-                    <div class="section_title text-center">
-                        <h2 class="title_color">Hotel Accomodation</h2>
-                        <p>There are various rooms and facilities options. Please choose according to your preference. </p>
-                    </div>
-                    <div class="row mb_30">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="accomodation_item text-center">
-                                <div class="hotel_img">
-                                    <img src="image/room1.jpg" alt="">
-                                    <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
-                                <h5>5만원<small>/1DAYS</small></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="accomodation_item text-center">
-                                <div class="hotel_img">
-                                    <img src="image/room2.jpg" alt="">
-                                    <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
-                                <h5>10만원<small>/1DAYS</small></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="accomodation_item text-center">
-                                <div class="hotel_img">
-                                    <img src="image/room3.jpg" alt="">
-                                    <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Family Room</h4></a>
-                                <h5>15만원<small>/1DAYS</small></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="accomodation_item text-center">
-                                <div class="hotel_img">
-                                    <img src="image/room4.jpg" alt="">
-                                    <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
-                                <h5>20만원<small>/1DAYS</small></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room1.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
-                        <h5>4만5000원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room2.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
-                        <h5>9만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room3.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Family Room</h4></a>
-                        <h5>13만5000원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room4.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
-                        <h5>18만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
+    
+    </style>
+    </head>
+    <body>
+     
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs" style="background-color:white;">
+                    <li class="tab col s4"><a href="#test1" class="active">예약정보 입력 및 이용가능 객실검색
+                    <li class="tab col s4"><a href="#test2">객실선택
+                    <li class="tab col s4"><a href="#test4">결제방식</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!--================ 숙박 시설 영역  =================-->
-
-    <div class="hotel_booking_area position">
-        <div class="container">
-            <div class="hotel_booking_table">
-                <div class="col-md-3">
-                    <h2>곧 매진!<br>hurry up!</h2>
-                </div>
-                <div class="col-md-9">
-                    <div class="boking_table">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker11'>
-                                            <input type='text' class="form-control" placeholder="체크인 날짜" />
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" placeholder="체크아웃 날짜" />
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="성인">성인</option>
-                                            <option value="1">1명</option>
-                                            <option value="2">2명</option>
-                                            <option value="2">3명</option>
-                                            <option value="2">4명</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="어린이">어린이</option>
-                                            <option value="1">1명</option>
-                                            <option value="2">2명</option>
-                                            <option value="2">3명</option>
-                                            <option value="2">4명</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="book_tabel_item">
-                                    <div class="input-group">
-                                        <select class="wide">
-                                            <option data-display="객실 수">객실 수</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                    <a class="book_now_btn button_hover" href="#">지금 예약</a>
-                                </div>
-                            </div>
-                        </div>
+        <div id='test1' class="col s12">
+            <form class="formValidate" action="" id="search">
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input placeholder="이름" id="이름" type="text" class="validate">
                     </div>
                 </div>
-            </div>
+
+
+
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="check_in" type="date" placeholder="Check In">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="check_out" type="date" placeholder="Check Out">
+            
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn orange" href='#test4' id="btnContinue2" style="margin-left:140px;">객실검색</a>
+            </form>
         </div>
-    </div>
-    </section>
-    <!--================배너 영역=================-->
-
-
-
-
-
-    <!--================ Rooms Area  =================-->
-    <section class="accomodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Normal Rooms & Package Rooms</h2>
-                <p>It shows the rooms currently available. You can get a discount at various discounts.</p>
-            </div>
-            <div class="row accomodation_two">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room1.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
-                        <h5>5만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room2.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
-                        <h5>10만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room3.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Family Room</h4></a>
-                        <h5>15만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room4.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
-                        <h5>20만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room5.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
-                        <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
-                        <h5>8만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room6.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
-                        <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
-                        <h5>13만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room7.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Family Room</h4></a>
-                        <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
-                        <h5>18만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/room8.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">지금 예약</a>
-                        </div>
-                        <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
-                        <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
-                        <h5>23만원<small>/1DAYS</small></h5>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </section>
-    <!--================ Rooms Area  =================-->
-
-
-
-
-
-    <!--================ 바닥글 시작 영역  =================-->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">About Agency</h6>
-                        <p>This homepage is produced and operated by the Risotto team of database programming in Dongguk University. Please use a lot. Anyone who illegally steals or replicates will be subject to legal penalties. </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">Navigation Links</h6>
-                        <div class="row">
-                            <div class="col-4">
-                                <ul class="list_style">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Rooms</a></li>
-                                    <li><a href="#">Amenities</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-4">
-                                <ul class="list_style">
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Restaurant</a></li>
-                                    <li><a href="#">QnA</a></li>
-                                    <li><a href="#">Service</a></li>
-                                </ul>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">Newsletter</h6>
-                        <p>You can update your travel news in real time. If you want to hear about Dongguk Resort, please subscribe.Please enter your email.</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
-                                </div>
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget instafeed">
-                        <h6 class="footer_title">InstaFeed</h6>
-                        <ul class="list_style instafeed d-flex flex-wrap">
-                            <li><img src="image/instagram/Image-01.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-02.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-03.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-04.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-05.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-06.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-07.jpg" alt=""></li>
-                            <li><img src="image/instagram/Image-08.jpg" alt=""></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="border_line"></div>
-            <div class="row footer-bottom d-flex justify-content-between align-items-center">
-                <p class="col-lg-8 col-sm-12 footer-text m-0">
-
-
-
-                    <!-- 사용 권한 -->
-                    Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> (주)동국리조트에 관리 및 복제 모든권한이 있습니다.
-
-
-
-                    <!-- sns 연동 -->
+        <div id='test2' class="col s12">
+            <form action="#" id="rooms" name="rooms">
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test5" />
+                    <label for="test5">Standard Room (선착순 50% 할인)</label>
                 </p>
-                <div class="col-lg-4 col-sm-12 footer-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-behance"></i></a>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" id="test6" />
+                    <label for="test6">Deluxe Room (선착순 50% 할인)</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" id="test7" />
+                    <label for="test7">Family Room (선착순 50% 할인)</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" id="test8" />
+                    <label for="test8">Suite Room (선착순 50% 할인)</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" id="test9" />
+                    <label for="test9">Standard Room (Ski Package)</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test10" />
+                    <label for="test10">Deluxe Room (Ski Package</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test11" />
+                    <label for="test11">Family Room (Ski Package</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test12" />
+                    <label for="test12">Suite Room (Ski Package</label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test13" />
+                    <label for="test13">Standard Room </label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test14" />
+                    <label for="test14">Deluxe Room </label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test15" />
+                    <label for="test15">Family Room </label>
+                </p>
+                <p style="padding-left:85vh">
+                    <input type="checkbox" class="checkbox-indigo" id="test16" />
+                    <label for="test16">Suite Room </label>
+                </p>
+            </form>
+            <br />
+            <a class="waves-effect waves-light btn orange" href='#test4' id="btnContinue2" style="margin-left:85vh;">객실선택</a>
+        </div>
+        <div id='test4' class="col s12">
+            <form action="#" id="services">
+                
+               <p style="padding-left:150vh">
+                    <input type="checkbox" id="test17" />
+                    <label for="test17">현금</label>
+                </p>
+                <p style="padding-left:150vh">
+                    <input type="checkbox" id="test18" />
+                    <label for="test18">신용카드</label>
+                </p>
+                <p style="padding-left:150vh">
+                    <input type="checkbox" id="test19" />
+                    <label for="test19">카카오페이</label>
+                </p>
+                <p style="padding-left:150vh">
+                    <input type="checkbox" id="test20" />
+                    <label for="test20">동국페이</label>
+                </p>
+            </form>
+            <br />
+            <a class="waves-effect waves-light btn orange" href='#test4' id="btnContinue2" style="margin-left:150vh;">예약진행</a>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('ul.tabs').tabs();
+                $("#btnContinue").click(function () {
+                    if (validateSearch()) {
+                        //$('ul.tabs').tabs('select_tab', 'test2');
+                        $("#search").submit();
+                    }
+                });
+                $("#btnContinue2").click(function () {
+                    var checked = $("#rooms input:checked").length > 0;
+                    if (!checked) {
+                        alert("Please check at least one room.");
+                        return false;
+                    }
+                    $('ul.tabs').tabs('select_tab', 'test4');
+                });
+            });
+
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 15 // Creates a dropdown of 15 years to control year
+            });
+
+            function validateSearch() {
+                var x = document.forms["search"]["country"].value;
+                var y = document.forms["search"]["state"].value;
+                var z = document.forms["search"]["room_type"].value;
+                var u = document.forms["search"]["check_out"].value;
+                var w = document.forms["search"]["check_in"].value;
+
+                console.log(x);
+                console.log(y);
+                console.log(z);
+                console.log(u);
+                console.log(w);
+
+                //console.log($('.datepicker').val());
+                if (u == "") {
+                    alert("Check Out date is required!");
+                    return false;
+                }
+
+                if (x == "") {
+                    alert("Country is required!");
+                    return false;
+                }
+
+                if (y == "") {
+                    alert("State is required!");
+                    return false;
+                }
+
+                if (z == "") {
+                    alert("Room Type is required!");
+                    return false;
+                }
+
+                if (w == "") {
+                    alert("Check-In date is required!");
+                    return false;
+                }
+
+                window.location = '#test2'
+                return true;
+            }
+
+
+
+        </script>
+        <!--================ 숙박 시설 영역  =================-->
+        <section class="accomodation_area section_gap">
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_color">Today's Bargain Rooms</h2>
+                    <p>Discounted room due to Nosho room. It is 10% cheaper than the existing price. </p>
+                </div>
+                <div class="row mb_30">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room1.jpg" alt="">
+                             
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
+                            <h5>4만5000원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room2.jpg" alt="">
+                               
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
+                            <h5>9만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room3.jpg" alt="">
+                             
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Family Room</h4></a>
+                            <h5>13만5000원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room4.jpg" alt="">
+                              
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
+                            <h5>18만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!--================ 바닥 글 끝 영역  =================-->
-    <!-- Optional 자바스크립트 -->
-    <!-- 먼저 jQuery, 그 다음 Popper.js, JS 부트 스트랩 -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="js/custom.js"></script>
-</body>
+        </section>
+        <!--================ 숙박 시설 영역  =================-->
+
+ 
+        <!--================ Rooms Area  =================-->
+        <section class="accomodation_area section_gap">
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_color">Normal Rooms & Package Rooms</h2>
+                    <p>It shows the rooms currently available. You can get a discount at various discounts.</p>
+                </div>
+                <div class="row accomodation_two">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room1.jpg" alt="">
+                     
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
+                            <h5>5만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room2.jpg" alt="">
+                             
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
+                            <h5>10만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room3.jpg" alt="">
+                           
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Family Room</h4></a>
+                            <h5>15만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room4.jpg" alt="">
+                        
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
+                            <h5>20만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room5.jpg" alt="">
+                            
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Standard Room</h4></a>
+                            <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
+                            <h5>8만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room6.jpg" alt="">
+                        
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Deluxe Room</h4></a>
+                            <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
+                            <h5>13만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room7.jpg" alt="">
+                          
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Family Room</h4></a>
+                            <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
+                            <h5>18만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="accomodation_item text-center">
+                            <div class="hotel_img">
+                                <img src="image/room8.jpg" alt="">
+               
+                            </div>
+                            <a href="#"><h4 class="sec_h4">Suite Room</h4></a>
+                            <a href="#"><h4 class="sec_h4">Ski Package</h4></a>
+                            <h5>23만원<small>/1DAYS</small></h5>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <!--================ Rooms Area  =================-->
+        <!--================ 바닥글 시작 영역  =================-->
+        <footer class="footer-area section_gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">About Agency</h6>
+                            <p>This homepage is produced and operated by the Risotto team of database programming in Dongguk University. Please use a lot. Anyone who illegally steals or replicates will be subject to legal penalties. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Navigation Links</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list_style">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Rooms</a></li>
+                                        <li><a href="#">Amenities</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list_style">
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Restaurant</a></li>
+                                        <li><a href="#">QnA</a></li>
+                                        <li><a href="#">Service</a></li>
+                                    </ul>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Newsletter</h6>
+                            <p>You can update your travel news in real time. If you want to hear about Dongguk Resort, please subscribe.Please enter your email.</p>
+                            <div id="mc_embed_signup">
+                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
+                                    </div>
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget instafeed">
+                            <h6 class="footer_title">InstaFeed</h6>
+                            <ul class="list_style instafeed d-flex flex-wrap">
+                                <li><img src="image/instagram/Image-01.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-02.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-03.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-04.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-05.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-06.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-07.jpg" alt=""></li>
+                                <li><img src="image/instagram/Image-08.jpg" alt=""></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="border_line"></div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-sm-12 footer-text m-0">
+
+
+
+                        <!-- 사용 권한 -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> (주)동국리조트에 관리 및 복제 모든권한이 있습니다.
+
+
+
+                        <!-- sns 연동 -->
+                    </p>
+                    <div class="col-lg-4 col-sm-12 footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--================ 바닥 글 끝 영역  =================-->
+        <!-- Optional 자바스크립트 -->
+        <!-- 먼저 jQuery, 그 다음 Popper.js, JS 부트 스트랩 -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
 </html>
