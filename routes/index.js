@@ -64,12 +64,16 @@ router.get('/',function(req,res){
     //var user=req.session.user;
     //console.log(user);
     //res.render('index.ejs',{name:req.session.user.name});
-    res.render('index');
+    res.render('index.ejs');
     //}
   //  else{
     //res.render('index.ejs',{name:null});
   //  res.render('index.html');
   //  }
+});
+router.get('/index',function(req,res){
+
+    res.render('index.ejs');
 });
 router.get('/logout',function (req,res) {
     req.session.user= null;
@@ -79,5 +83,33 @@ router.get('/logout',function (req,res) {
 router.get('/signup',function(req,res){
   //let title='학생 성적표 등록하기';
   res.render('signup.ejs');
+});
+
+router.get('/about',function(req,res){
+  res.render('about.ejs');
+});
+
+router.get('/Rooms',function(req,res){
+  res.render('Rooms.ejs');
+});
+
+router.get('/Amenities',function(req,res){
+  res.render('Amenities.ejs');
+});
+
+router.get('/blog',function(req,res){
+  res.render('blog.ejs');
+});
+
+router.get('/blog-single',function(req,res){
+  res.render('blog-single.ejs');
+});
+
+router.get('/Restaurant',function(req,res){
+  res.render('Restaurant.ejs');
+});
+
+router.get('/QnA',function(req,res){
+  res.render('QnA.ejs');
 });
 module.exports = router;
