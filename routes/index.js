@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var oracledb = require('oracledb');
+let cusnum=1;
 
 
 // router.post('/signup',function(req,res){
@@ -36,33 +38,84 @@ var router = express.Router();
 router.post('/loginverify',function(req,res){
   var id=req.body.id;
   var password=req.body.password;
-  var sql="select id,pwd,name from personInfo where id='"+id+"'and pwd='"+password+"'";
+  var sql="select customer_email,pwd,name from customer where customer_email='"+id+"'and customer_password='"+password+"'";
 
-  db.query(sql).then(function(results){
+  oracledb.getConnection(
+    {
+      user :"jhyang2362",
+      password  :"1qaz1qaz",
+      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+    },
+    function(err, connection){
+      if(err) {
+        console.error(err.message);
+        return;
+      }
+      connection.execute(sql,function(err, result){
+          if(err) {
+            console.error(err.message);
+            doRelease(connection);
+          }
+          //console.log(result.metaData);
+          //console.log(result.rows);
+          doRelease(connection);
 
-    //console.log(results[0].name);
-    if((id==results[0].id) && (password==results[0].pwd)){
-
-    req.session.user={
-        id: results[0].id,
-        name:results[0].name
-    };
-    req.session.save(() => {
-      //var user=req.session.user;
-      res.render('index.ejs',{name:req.session.user.name})
-    });
-
-    //console.log(req.session.user);
+          req.session.user={
+              name:result.metaData.name
+          };
+          req.session.save(() => {
+            //var user=req.session.user;
+            res.render('index.ejs',{name:req.session.user.name})
+          });
+        }
+      );
     }
-    else {
-      res.redirect('/')
-    }
-  });
+  );
 });
+router.post('/signup_verify',function(req,res){
+  var num=cusnum++;
+  var name=req.body.customer_name;
+  var address=req.body.customer_address;
+  var email=req.body.customer_email;
+  var password=req.body.customer_password;
+  var phone=req.body.customer_phone_number;
+  var card_number=req.body.card_number;
+
+  var sql="insert into customer customer_number,customer_name,customer_address,customer_email,customer_password,customer_phone_number,card_number"
+  +"values ("+num+",'"+name+"','"+address+"','"+email+"','"+password+"','"+phone+"','"+card_number+"'";
+
+  oracledb.getConnection(
+    {
+      user :"jhyang2362",
+      password  :"1qaz1qaz",
+      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+    },
+    function(req,err, connection){
+      if(err) {
+        console.error(err.message);
+        return;
+      }
+      connection.execute(sql,function(err, result){
+          if(err) {
+            console.error(err.message);
+            doRelease(connection);
+          }
+          console.log(result.rows);
+
+          console.log(result.metaData);
+          console.log(result.rows);
+          doRelease(connection);
+        }
+      );
+    }
+  );
+  res.redirect('/index');
+});
+
+
 router.get('/',function(req,res){
     //if(req.session.user){
     //var user=req.session.user;
-    //console.log(user);
     //res.render('index.ejs',{name:req.session.user.name});
     res.render('index.ejs');
     //}
@@ -72,8 +125,17 @@ router.get('/',function(req,res){
   //  }
 });
 router.get('/index',function(req,res){
+    if(req.session.user){
+      var name=req.session.user.name;
+      res.render('index.ejs',{name:name});
+    }
+    else{
+      res.render('index.ejs',{name:null});
+    }
+});
+router.get('/login',function(req,res){
 
-    res.render('index.ejs');
+    res.render('login.ejs');
 });
 router.get('/logout',function (req,res) {
     req.session.user= null;
@@ -112,4 +174,12 @@ router.get('/Restaurant',function(req,res){
 router.get('/QnA',function(req,res){
   res.render('QnA.ejs');
 });
+
+function doRelease(connection){
+  connection.release(
+    function(err){
+      if(err) console.error(err.message);
+    }
+  )
+}
 module.exports = router;
