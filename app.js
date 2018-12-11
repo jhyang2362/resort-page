@@ -12,12 +12,20 @@ var oracledb = require('oracledb');
 
 var app = express();
 
+app.use(session({
+  secret: 'secret key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false, maxAge: 60*2000 }
+  //using secure flag means that the cookie will be set on Https only
+}))
+
 //oracledb setting
 oracledb.getConnection(
   {
-    user :"****",
-    password  :"****",
-    connectString :"****"
+    user :"jhyang2362",
+    password  :"1qaz1qaz",
+    connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
   },
   function(err, connection){
     if(err) {
@@ -25,7 +33,7 @@ oracledb.getConnection(
       return;
     }
     connection.execute(
-      "SELECT * FROM ROOM", //연결됐는지 확인 용 쿼리
+      "SELECT * FROM customer", //연결됐는지 확인 용 쿼리
       function(err, result){
         if(err) {
           console.error(err.message);
@@ -64,13 +72,6 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-app.use(session({
-  secret: 'secret key',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false, maxAge: 60*2000 }
-  //using secure flag means that the cookie will be set on Https only
-}))
 
 // error handler
 app.use(function(err, req, res, next) {
