@@ -38,13 +38,13 @@ let cusnum=1;
 router.post('/loginverify',function(req,res){
   var id=req.body.id;
   var password=req.body.password;
-  var sql="select customer_email,pwd,name from customer where customer_email='"+id+"'and customer_password='"+password+"'";
+  var sql="select customer_email,customer_password,customer_name from customer where customer_email='"+id+"'and customer_password='"+password+"'";
 
   oracledb.getConnection(
     {
-      user :"****",
-      password  :"****",
-      connectString :"****"
+      user :"jhyang2362",
+      password  :"1qaz1qaz",
+      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
     },
     function(err, connection){
       if(err) {
@@ -54,23 +54,26 @@ router.post('/loginverify',function(req,res){
       connection.execute(sql,function(err, result){
           if(err) {
             console.error(err.message);
-            doRelease(connection);
+          //  doRelease(connection);
           }
           //console.log(result.metaData);
           //console.log(result.rows);
-          doRelease(connection);
-
-          req.session.user={
-              name:result.metaData.name
+          //doRelease(connection);
+          console.log(result.rows);
+          if(id==result.metaData.customer_email && password==result.metaData.customer_password){
+              req.session.user={
+              name:result.rows.customer_name
           };
           req.session.save(() => {
-            //var user=req.session.user;
-            res.render('index.ejs',{name:req.session.user.name})
+              //var user=req.session.user;
+              res.render('index.ejs',{name:req.session.user.name})
           });
+          }
         }
       );
     }
   );
+
 });
 router.post('/signup_verify',function(req,res){
   var num=cusnum++;
@@ -83,12 +86,12 @@ router.post('/signup_verify',function(req,res){
 
   var sql="insert into customer customer_number,customer_name,customer_address,customer_email,customer_password,customer_phone_number,card_number"
   +"values ("+num+",'"+name+"','"+address+"','"+email+"','"+password+"','"+phone+"','"+card_number+"'";
-
+  console.log(sql);
   oracledb.getConnection(
     {
-      user :"*****",
-      password  :"****",
-      connectString :"*****"
+      user :"jhyang2362",
+      password  :"1qaz1qaz",
+      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
     },
     function(req,err, connection){
       if(err) {
@@ -98,13 +101,13 @@ router.post('/signup_verify',function(req,res){
       connection.execute(sql,function(err, result){
           if(err) {
             console.error(err.message);
-            doRelease(connection);
+          //  doRelease(connection);
           }
           console.log(result.rows);
 
           console.log(result.metaData);
           console.log(result.rows);
-          doRelease(connection);
+          //doRelease(connection);
         }
       );
     }
