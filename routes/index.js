@@ -42,9 +42,9 @@ router.post('/loginverify',function(req,res){
 
   oracledb.getConnection(
     {
-      user :"jhyang2362",
-      password  :"1qaz1qaz",
-      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+      user :"****",
+      password  :"****",
+      connectString :"****"
     },
     function(err, connection){
       if(err) {
@@ -86,9 +86,9 @@ router.post('/signup_verify',function(req,res){
 
   oracledb.getConnection(
     {
-      user :"jhyang2362",
-      password  :"1qaz1qaz",
-      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+      user :"*****",
+      password  :"****",
+      connectString :"*****"
     },
     function(req,err, connection){
       if(err) {
