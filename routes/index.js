@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var oracledb = require('oracledb');
+var dbConfig = require('../dbConfig.js');
 let cusnum=1;
 
 
@@ -35,16 +36,17 @@ let cusnum=1;
 //   res.render('login.ejs');
 // });
 
+oracledb.autoCommit = true;
 router.post('/loginverify',function(req,res){
   var id=req.body.id;
   var password=req.body.password;
-  var sql="select customer_email,pwd,name from customer where customer_email='"+id+"'and customer_password='"+password+"'";
+  var sql="select customer_email,customer_password,customer_name from customer where customer_email='"+id+"'and customer_password='"+password+"'";
 
   oracledb.getConnection(
     {
-      user :"jhyang2362",
-      password  :"1qaz1qaz",
-      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+      user :dbConfig.user,
+      password  :dbConfig.password,
+      connectString :dbConfig.connectString
     },
     function(err, connection){
       if(err) {
@@ -81,29 +83,26 @@ router.post('/signup_verify',function(req,res){
   var phone=req.body.customer_phone_number;
   var card_number=req.body.card_number;
 
-  var sql="insert into customer customer_number,customer_name,customer_address,customer_email,customer_password,customer_phone_number,card_number"
-  +"values ("+num+",'"+name+"','"+address+"','"+email+"','"+password+"','"+phone+"','"+card_number+"'";
-
+  var sql="insert into customer(customer_number, customer_name, customer_address, customer_email, customer_password, customer_phone_number, card_number)"
+  +" values (:customer_number, :customer_name, :customer_address, :customer_email, :customer_password, :customer_phone_number, :card_number)";
+  console.log(sql);
+  var binddata = [ 1, name, address, email, password, phone, card_number  ]
   oracledb.getConnection(
     {
-      user :"jhyang2362",
-      password  :"1qaz1qaz",
-      connectString :"dongguk-resort.chlmmb1ouqst.ap-northeast-2.rds.amazonaws.com/ORCL"
+      user :dbConfig.user,
+      password  :dbConfig.password,
+      connectString :dbConfig.connectString
     },
-    function(req,err, connection){
+    function(err, connection){
       if(err) {
-        console.error(err.message);
-        return;
+        console.error("연결에러: "+err.message);
       }
-      connection.execute(sql,function(err, result){
+      connection.execute(sql, binddata, function(err, result){
           if(err) {
-            console.error(err.message);
+            console.error("쿼리 에러:"+err.message);
             doRelease(connection);
           }
-          console.log(result.rows);
-
-          console.log(result.metaData);
-          console.log(result.rows);
+          console.log("생성: "+result.rowsAffected);
           doRelease(connection);
         }
       );
@@ -117,7 +116,7 @@ router.get('/',function(req,res){
     //if(req.session.user){
     //var user=req.session.user;
     //res.render('index.ejs',{name:req.session.user.name});
-    res.render('index.ejs');
+    res.render('index.ejs',{name:null});
     //}
   //  else{
     //res.render('index.ejs',{name:null});
