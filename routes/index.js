@@ -56,23 +56,26 @@ router.post('/loginverify',function(req,res){
       connection.execute(sql,function(err, result){
           if(err) {
             console.error(err.message);
-            doRelease(connection);
+          //  doRelease(connection);
           }
           //console.log(result.metaData);
           //console.log(result.rows);
-          doRelease(connection);
-
-          req.session.user={
-              name:result.metaData.name
+          //doRelease(connection);
+          console.log(result.rows);
+          if(id==result.metaData.customer_email && password==result.metaData.customer_password){
+              req.session.user={
+              name:result.rows.customer_name
           };
           req.session.save(() => {
-            //var user=req.session.user;
-            res.render('index.ejs',{name:req.session.user.name})
+              //var user=req.session.user;
+              res.render('index.ejs',{name:req.session.user.name})
           });
+          }
         }
       );
     }
   );
+
 });
 router.post('/signup_verify',function(req,res){
   var num=cusnum++;
